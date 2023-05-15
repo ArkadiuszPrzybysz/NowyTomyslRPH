@@ -1,0 +1,14 @@
+
+# HTID:21593298: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:21593298:
+
+
+RewriteEngine On
+
+# Ukryj rozszerzenie .php w adresie URL dla stron index, wolsztyn i choinka
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+
